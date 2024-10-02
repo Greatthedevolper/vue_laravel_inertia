@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-wrapper {
+    @apply relative my-4;
+    .vue-input-label {
+        @apply block text-sm font-medium text-gray-700 capitalize;
+    }
+    .vue-input {
+        @apply w-full px-3 py-2 text-gray-700 placeholder-gray-400 border border-gray-300 rounded-md;
+    }
+}
+main {
+    @apply h-[calc(100dvh-50px)] overflow-y-auto overflow-x-hidden;
+    &:has(.auth-form) {
+        @apply flex items-center justify-center h-[calc(100dvh-1px)];
+    }
+    .auth-form {
+        @apply w-full  max-w-[500px] m-auto p-4;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0px 0px 16px 0px rgba(250, 204, 21, 1);
+        backdrop-filter: blur(4.5px);
+        -webkit-backdrop-filter: blur(4.5px);
+        border-radius: 10px;
+    }
+}
+
+#nprogress {
+    .spinner {
+        @apply fixed top-0 left-0 bg-[rgba(0,0,0,0.3)] w-full h-full;
+        .spinner-icon {
+            border-top-color: red;
+            border-left-color: red;
+            margin: 0 auto;
+            width: 60px !important;
+            height: 60px !important;
+            position: absolute;
+            top: calc(50% - 31px);
+            left: calc(50% - 31px);
+            z-index: 9999;
+            border-width: 2px;
+            border-style: dashed;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            transform-origin: center center;
+
+            @media (max-width: 768px) {
+                width: 40px !important;
+                height: 40px !important;
+                top: calc(50% - 21px);
+                left: calc(50% - 21px);
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+* {
+    scrollbar-color: unset !important;
+}
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #5959f940;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #5959f940;
+}
