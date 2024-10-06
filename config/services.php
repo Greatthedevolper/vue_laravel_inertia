@@ -34,20 +34,5 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
-    'firebase' => [
-        'databaseURL' => env('FIREBASE_DATABASE_URL'),
-        'apiKey' => env('FIREBASE_API_KEY'),
-        'authDomain' => env('FIREBASE_AUTH_DOMAIN'),
-        'projectId' => env('FIREBASE_PROJECT_ID'),
-        'storageBucket' => env('FIREBASE_STORAGE_BUCKET'),
-        // 'apiKey' => "AIzaSyC_vxSuLnDDWbJDOiP6aDWw334mVY5ZdG8",
-        // 'authDomain' => "laravel-inertia-996f5.firebaseapp.com",
-        // 'databaseURL' => "https://laravel-inertia-996f5-default-rtdb.firebaseio.com",
-        // 'projectId' => "laravel-inertia-996f5",
-        // 'storageBucket' => "laravel-inertia-996f5.appspot.com",
-        // 'messagingSenderId' => "19479149469",
-        // 'appId' => "1:19479149469:web:9e8c55201fb278173d0d74",
-        // 'measurementId' => "G-D62FGQ4QBT"
-    ]
 
 ];

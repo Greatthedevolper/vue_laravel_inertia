@@ -69,7 +69,6 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-        App\Providers\FirebaseServiceProvider::class,
     ],
 
     /*
